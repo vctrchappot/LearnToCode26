@@ -2,7 +2,7 @@
 
 ## Was ist ein Compiler ?
 
-### Ein Compiler ist ein Programm, welches in einer höheren Programmiersprache geschreibenen Quellcode in binären, von Maschinen lesbaren Code übersetzt, und damit ein +- direkt ausführbares Programm, z.B eine .exe, erzeugt.
+### Ein Compiler ist ein Programm, welches in einer höheren Programmiersprache geschreibenen Quellcode in binären, von Maschinen lesbaren Code übersetzt, und damit ein +- direkt ausführbares Programm erzeugt.
 
 ## Schaut mit dem Explorer in das Verzeichnis mit den 2 Files. Was hat sich verändert?
 
