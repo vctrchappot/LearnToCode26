@@ -15,3 +15,18 @@
 
 # 01. First Steps
 
+## Wieso verwendet man Git (oder andere Versionierungssoftware)?
+
+### Man verwendet Git bzw. Versionierungssoftware damit man effizient und effektiv mit verschiedenen Versionen von Software arbeiten kann.
+
+## Was ist der Unterschied zwischen Commiten und "normal" speichern?
+
+### Commiten erstellt eine Art lokalen "Checkpoint", auf welchen man wieder zurück kehren kann.
+
+## Wie oft sollte man commiten?
+
+### 
+
+## Was ist die Funktion von einem Pull Request?
+
+### 
