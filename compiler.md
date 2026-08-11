@@ -21,22 +21,12 @@
 
 ## Was ist der Unterschied zwischen Commiten und "normal" speichern?
 
-### Commiten erstellt eine Art "Checkpoint", auf welchen man wieder zurückkehren kann, normal speichern ist einfach lokal den aktuellen Stand abspeichern, an welchem man direkt weiterarbeitet.
+### Commiten erstellt eine Art lokalen "Checkpoint", auf welchen man wieder zurück kehren kann.
 
 ## Wie oft sollte man commiten?
 
-### Immer, sobald man eine beträchtliche Menge Arbeit oder eine wichtige Aufgabe umgesetzt hat, und zu dieser zurückkehren können möchte.
+### 
 
 ## Was ist die Funktion von einem Pull Request?
 
-### Mit Pull ziehst du die neuste Version eines Repos zu dir.
-
-# Datentypen und Variablen
-
-## Wieso funktioniert das erste Beispiel, das zweite aber nicht?
-
-### Es funktioniert nicht, da der Code versucht eine Kommazahl als eine Ganzzahl zu referenzieren oder speichern.
-
-## Was fehlt im oberen zweiten Beispiel, damit es kompiliert (Typ:  )? Was ist das Problem dabei? Stellt euch ein Szenario vor, wo dies zu einem Problem führen könnte.
-
-### Man müsste mithilfe von TypeCasting die Gleitzahl in eine Ganzkommazahl umwandeln, indem man ein (int) in der unteren Deklaration hinzufügt.
+### 
