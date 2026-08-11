@@ -1,10 +1,5 @@
-﻿namespace FirstSteps;
+﻿Console.WriteLine("Bitte geben Sie einen Namen ein:");
 
-static class Program
-{
-    public static void Main(string[] args)
-    {
-        var arguments = string.Join(",", args);
-        Console.WriteLine($"Here comes the arguments: {arguments}");
-    }
-}
+string userName = Console.ReadLine();
+
+Console.WriteLine("Hallo " + userName + "!");
