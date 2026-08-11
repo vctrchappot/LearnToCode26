@@ -18,9 +18,8 @@ class Program
 
     static void piEulerNumber()
     {
-        const float piFloat = 3;
-        const double piDouble = 0.14159;
-        Console.WriteLine("Die ersten sechs Ziffern von Pi sind " + (piFloat + piDouble));
+        const double pi = 3.14159;
+        Console.WriteLine("Die ersten sechs Ziffern von Pi sind " + pi);
     }
 }
 
