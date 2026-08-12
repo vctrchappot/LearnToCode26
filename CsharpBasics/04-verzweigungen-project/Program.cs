@@ -7,7 +7,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        CompareNumbersConditional();
+        CheckMultiples();
     }
 
     static void CompareNumbers()
@@ -42,7 +42,11 @@ class Program
         Console.WriteLine("Gib deine zweite Zahl ein:");
         int.TryParse(Console.ReadLine(), out y);
 
-        if ((x % y) == 0)
+        if (y == 0)
+        {
+            return;
+        }
+        if ((x % y) == 0 || (y % x) == 0)
         {
             if (x == y)
             {
