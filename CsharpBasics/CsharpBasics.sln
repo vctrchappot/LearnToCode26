@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02-vars-project", "02-vars-
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03-operators-project", "03-operators-project\03-operators-project.csproj", "{8BA8B8FF-7996-433F-8185-8CC188DC1A64}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04-verzweigungen-project", "04-verzweigungen-project\04-verzweigungen-project.csproj", "{27F7EDF2-4F2A-48C0-B9D3-CE6E7C19C92F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{8BA8B8FF-7996-433F-8185-8CC188DC1A64}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8BA8B8FF-7996-433F-8185-8CC188DC1A64}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8BA8B8FF-7996-433F-8185-8CC188DC1A64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27F7EDF2-4F2A-48C0-B9D3-CE6E7C19C92F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27F7EDF2-4F2A-48C0-B9D3-CE6E7C19C92F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27F7EDF2-4F2A-48C0-B9D3-CE6E7C19C92F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27F7EDF2-4F2A-48C0-B9D3-CE6E7C19C92F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
