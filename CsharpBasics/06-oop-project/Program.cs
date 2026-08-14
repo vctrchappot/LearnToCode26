@@ -179,7 +179,7 @@ public class BankAccount
     public static int CurrentBalanceReader(BankAccount acc1, BankAccount acc2, BankAccount acc3)
     {
         Console.WriteLine("Which account do you wanna use 1-3");
-        int.TryParse(Console.ReadLine(), out var userSelection);
+        var userSelection = int.Parse(Console.ReadLine());
         switch (userSelection)
         {
             case 1:
