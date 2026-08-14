@@ -5,7 +5,7 @@ namespace Debugging_Task_4
     class Program
     {
         //gewünschtes Verhalten:es wird 6 und  9 in die Konsole geschrieben
-        private const int numberOfApples = 1;
+        private static int numberOfApples = 1;
         static void Main(string[] args)
         {
             //You get 5 new apples, add them to the existing apples
@@ -18,7 +18,7 @@ namespace Debugging_Task_4
 
         static int AddNumberOfApples(int numberOfNewApples)
         {
-            return numberOfApples + numberOfNewApples;
+            return numberOfApples += numberOfNewApples;
         }
     }
 }
