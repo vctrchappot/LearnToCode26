@@ -14,7 +14,7 @@ public class Program
         //Console.WriteLine($"Your new Balance is {newBalance}");
     }
     
-    public static void helloWorldInput()
+    public static void HelloWorldInput()
     {
         Console.WriteLine("Hallo, wie lautet dein Name?");
         var userName = Console.ReadLine();
@@ -22,16 +22,16 @@ public class Program
         Console.WriteLine($"Hallo, {userName}!");
     }
     
-    public static void isBiggerInteger()
+    public static void IsBiggerInteger()
     {
         var firstNumber = 0;
         var secondNumber = 0;
         
         Console.WriteLine("Erste Zahl:");
-        int.TryParse(Console.ReadLine(), out firstNumber);
+        firstNumber = int.Parse(Console.ReadLine());
         
         Console.WriteLine("Zweite Zahl:");
-        int.TryParse(Console.ReadLine(), out secondNumber);
+        secondNumber = int.Parse(Console.ReadLine());
 
         if (firstNumber > secondNumber)
         {
@@ -47,7 +47,7 @@ public class Program
         }
     }
 
-    public static void amountOfSpaces()
+    public static void AmountOfSpaces()
     {
         var userInput = Console.ReadLine();
 
@@ -77,12 +77,12 @@ public class BankAccount
     public static void Transfer(BankAccount acc1, BankAccount acc2, BankAccount acc3)
     {
         var transferAmount = 0;
-
-        BankAccount sendingBankAccount = new BankAccount();
-        BankAccount recievingBankAccount = new BankAccount();        
+        
+        var sendingBankAccount = new BankAccount();
+        var recievingBankAccount = new BankAccount();        
         
         Console.WriteLine("Von welchem Account aus möchtest du Geld überweisen?");
-        int.TryParse(Console.ReadLine(), out var firstUserInput);
+        var firstUserInput = int.Parse(Console.ReadLine());
 
         switch (firstUserInput)
         {
@@ -101,7 +101,10 @@ public class BankAccount
         }
         
         Console.WriteLine("Auf welchem Account aus möchtest du Geld überweisen?");
-        int.TryParse(Console.ReadLine(), out var secondUserInput);
+        if (!int.TryParse(Console.ReadLine(), out var secondUserInput))
+        {
+            Console.WriteLine("Bitte gib einen gültigen Account ein!");
+        }
 
         switch (secondUserInput)
         {
@@ -131,7 +134,7 @@ public class BankAccount
             Console.WriteLine("Bitte gib einen gültigen Betrag ein!");
         }
 
-        int saldo = sendingBankAccount.Balance - transferAmount;
+        var saldo = sendingBankAccount.Balance - transferAmount;
         bool paymentSuccess;
 
         if (saldo > 0)
@@ -159,18 +162,16 @@ public class BankAccount
         var newBalance = localBalance;
         
         Console.WriteLine("Bitte gib den Betrag ein:");
-        int.TryParse(Console.ReadLine(), out var amountToChange);
+        var amountToChange = int.Parse(Console.ReadLine());
         
         Console.WriteLine("Möchtest du diesen Betrag von deinem Account (1)abziehen oder (2)hinzufügen?");
-        int.TryParse(Console.ReadLine(), out var transactionChoice);
-        if (transactionChoice == 1)
+        var transactionChoice = int.Parse(Console.ReadLine());
+        newBalance = transactionChoice switch
         {
-            newBalance = localBalance - amountToChange;
-        }
-        else if (transactionChoice == 2)
-        {
-            newBalance = localBalance + amountToChange;
-        }
+            1 => localBalance - amountToChange,
+            2 => localBalance + amountToChange,
+            _ => newBalance
+        };
 
         return newBalance;
     }
