@@ -1,8 +1,18 @@
 <Solution>
+  <Folder Name="/Debugging/">
+    <Project Path="Exercise1/Debugging_Tutotial_1/Debugging_Tutotial_1\Debugging_Tutotial_1.csproj" />
+    <Project Path="Exercise1/Debugging_Task_1/Debugging_Task_1/Debugging_Task_1.csproj" />
+    <Project Path="Exercise1/Debugging_Task_2/Debugging_Task_2/Debugging_Task_2.csproj" />
+
+    <Project Path="Exercise2/Debugging_Task_3/Debugging_Task_3\Debugging_Task_3.csproj" />
+    <Project Path="Exercise2/Debugging_Task_4/Debugging_Task_4/Debugging_Task_4.csproj" />
+    <Project Path="Exercise2/Debugging_Tutotial_2/Debugging_Tutotial_2/Debugging_Tutotial_2.csproj" />
+  </Folder>
   <Project Path="02-vars-project/02-vars-project.csproj" />
   <Project Path="03-operators-project/03-operators-project.csproj" />
   <Project Path="04-verzweigungen-project/04-verzweigungen-project.csproj" />
   <Project Path="05-loops-project/05-loops-project.csproj" />
   <Project Path="06-oop-project/06-oop-project.csproj" />
+  <Project Path="07-debugging-proj/07-debugging-proj.csproj" />
   <Project Path="FirstSteps/FirstSteps.csproj" />
 </Solution>
