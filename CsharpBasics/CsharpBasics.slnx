@@ -1,0 +1,8 @@
+<Solution>
+  <Project Path="02-vars-project/02-vars-project.csproj" />
+  <Project Path="03-operators-project/03-operators-project.csproj" />
+  <Project Path="04-verzweigungen-project/04-verzweigungen-project.csproj" />
+  <Project Path="05-loops-project/05-loops-project.csproj" />
+  <Project Path="06-oop-project/06-oop-project.csproj" />
+  <Project Path="FirstSteps/FirstSteps.csproj" />
+</Solution>
