@@ -24,7 +24,7 @@ namespace ConsoleApp_FirstApp
             new Galaxy() { Name="Maffei 1", MegaLightYears=11, GalaxyType=new GType('E')}
         };
 
-            foreach (Galaxy theGalaxy in theGalaxies)
+            foreach (var theGalaxy in theGalaxies)
             {
                 Console.WriteLine(theGalaxy.Name + "  " + theGalaxy.MegaLightYears + ",  " + theGalaxy.GalaxyType);
             }

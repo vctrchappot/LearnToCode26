@@ -7,9 +7,9 @@ namespace Debugging_Tutotial_1
         static void Main()
         {
             char[] letters = {'f', 'r', 'e', 'd', ' ', 's', 'm', 'i', 't', 'h'};
-            string name = "";
-            int[] a = new int[10];
-            for (int i = 0; i < letters.Length; i++)
+            var name = "";
+            var a = new int[10];
+            for (var i = 0; i < letters.Length; i++)
             {
                 name += letters[i];
                 a[i] = i + 1;

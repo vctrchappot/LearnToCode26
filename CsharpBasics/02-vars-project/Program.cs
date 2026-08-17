@@ -10,9 +10,9 @@ class Program
     static void NameAge()
     {
         byte age = 17;
-        string name = "Victor";
+        var name = "Victor";
 
-        string agename = name + ", " + age;
+        var agename = name + ", " + age;
         Console.WriteLine(agename);
     }
 
