@@ -9,8 +9,8 @@ class Program
 
     static void CalculateFirstResult()
     {
-        int x = 60;
-        int y = (x + x) * 5;
+        var x = 60;
+        var y = (x + x) * 5;
 
         Console.WriteLine(y);
     }

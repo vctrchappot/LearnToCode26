@@ -150,11 +150,9 @@ public class BankAccount
             paymentSuccess = false;
         }
 
-        if (paymentSuccess == true)
-        {
-            Console.WriteLine($"The account balance for first Account is : {sendingBankAccount.Balance}");
-            Console.WriteLine($"The account balance for Second Account is : {recievingBankAccount.Balance}");
-        }
+        if (!paymentSuccess) return;
+        Console.WriteLine($"The account balance for first Account is : {sendingBankAccount.Balance}");
+        Console.WriteLine($"The account balance for Second Account is : {recievingBankAccount.Balance}");
     }
 
     public static int ChangeAccountBalance(int localBalance)

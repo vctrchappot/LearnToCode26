@@ -14,5 +14,6 @@
   <Project Path="05-loops-project/05-loops-project.csproj" />
   <Project Path="06-oop-project/06-oop-project.csproj" />
   <Project Path="07-debugging-proj/07-debugging-proj.csproj" />
+  <Project Path="08-arrays-proj/08-arrays-proj.csproj" />
   <Project Path="FirstSteps/FirstSteps.csproj" />
 </Solution>
