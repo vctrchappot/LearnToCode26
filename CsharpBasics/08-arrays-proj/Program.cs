@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks.Dataflow;
+﻿using System.Globalization;
+using System.Threading.Tasks.Dataflow;
 
 namespace _08_arrays_proj;
 
@@ -6,44 +7,45 @@ class Program
 {
     private static void Main(string[] args)
     {
-        var array = GenerateRandom(); // Rufe Methode auf, um beliebig langer zufälliger Array zu generieren und speichern.
-        
-        var sorted = AscendingSorter(array);
-        Console.WriteLine(string.Join(", ", sorted));
+        var array = GenerateRandomIntArray(); // Rufe Methode auf, um beliebig langer zufälliger Array zu generieren und speichern.
 
-        // var counted = ArrayCounter(array);
+        var resizedArray = ArrayResizer(array);
+        Console.WriteLine(string.Join(", ", resizedArray));
+        
+        // var sorted = AscendingSorter(array);
+        // Console.WriteLine(string.Join(", ", sorted));
+
+        // var counted = SumArrays(array);
         // Console.WriteLine($"Die Summe aller Zahlen im Array lautet {counted}.");
 
         // var multiplied = IntegerMultiplier(array);
         // Console.WriteLine(string.Join(", ", multiplied));
 
-        // var reversed = ArrayReverser(array);
+        // var reversed = ReverseArray(array);
         // Console.WriteLine(string.Join(", ", reversed));
     }
 
-    private static int[] GenerateRandom()
+    private static int[] GenerateRandomIntArray()
     {
         Console.WriteLine("Wieviele zufällige Zahlen möchtest du generieren?:");
         var amountOfNumbers = int.Parse(Console.ReadLine());
         
-        var randomNumber = Enumerable.Range(0, amountOfNumbers).Select(_ => Random.Shared.Next(0, 100)).ToArray();
-
-        return randomNumber;
+        return Enumerable.Range(0, amountOfNumbers).Select(_ => Random.Shared.Next(0, 100)).ToArray();
     }
 
-    private static int ArrayCounter(int[] array)
+    private static int SumArrays(int[] array)
     {
         var sum = 0;
 
-        foreach (var variable in array)
+        foreach (var i in array)
         {
-            sum = variable + sum;
+            sum = i + sum;
         }
 
         return sum;
     }
 
-    private static int[] ArrayReverser(int[] array)
+    private static int[] ReverseArray(int[] array)
     {
         var reversed = new int[array.Length];
         var reversedIndex = 0;
@@ -74,7 +76,6 @@ class Program
     private static int[] AscendingSorter(int[] array)
     {
         var sorted = (int[])array.Clone();
-        var temporaryValue = 0;
 
         for (var currentIndex = 0; currentIndex < sorted.Length; currentIndex++)
         {
@@ -84,10 +85,7 @@ class Program
             {
                 if (sorted[currentIndex] > sorted[comparisonIndex])
                 {
-                    temporaryValue = sorted[currentIndex];
-
-                    sorted[currentIndex] = sorted[comparisonIndex];
-                    sorted[comparisonIndex] = temporaryValue;
+                    (sorted[currentIndex], sorted[comparisonIndex]) = (sorted[comparisonIndex], sorted[currentIndex]);
                 }
             }
         }
@@ -97,13 +95,13 @@ class Program
 
     private static int[] ArrayResizer(int[] array)
     {
-        Array.Resize(ref array, array.Length + 1);
+        var resizedArray = new int[array.Length +1];
 
         Console.WriteLine("Welche Zahl möchtest du dem Array hinzufügen?");
         var x = int.Parse(Console.ReadLine());
 
-        array[array.Length - 1] = x;
+        resizedArray[^1] = x;
 
-        return array;
+        return resizedArray;
     }
 }
