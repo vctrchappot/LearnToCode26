@@ -9,13 +9,13 @@ class Program
     {
         var array = GenerateRandomIntArray(); // Rufe Methode auf, um beliebig langer zufälliger Array zu generieren und speichern.
 
-        var resizedArray = ArrayResizer(array);
+        var resizedArray = ResizeArray(array);
         Console.WriteLine(string.Join(", ", resizedArray));
         
-        // var sorted = AscendingSorter(array);
+        // var sorted = SortArrays(array);
         // Console.WriteLine(string.Join(", ", sorted));
 
-        // var counted = SumArrays(array);
+        // var counted = SumArray(array);
         // Console.WriteLine($"Die Summe aller Zahlen im Array lautet {counted}.");
 
         // var multiplied = IntegerMultiplier(array);
@@ -33,7 +33,7 @@ class Program
         return Enumerable.Range(0, amountOfNumbers).Select(_ => Random.Shared.Next(0, 100)).ToArray();
     }
 
-    private static int SumArrays(int[] array)
+    private static int SumArray(int[] array)
     {
         var sum = 0;
 
@@ -73,7 +73,7 @@ class Program
         return multiplied;
     }
 
-    private static int[] AscendingSorter(int[] array)
+    private static int[] SortArrays(int[] array)
     {
         var sorted = (int[])array.Clone();
 
@@ -93,7 +93,7 @@ class Program
         return sorted;
     }
 
-    private static int[] ArrayResizer(int[] array)
+    private static int[] ResizeArray(int[] array)
     {
         var resizedArray = new int[array.Length +1];
 
